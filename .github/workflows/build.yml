@@ -14,5 +14,4 @@ jobs:
     steps:
       - name: publish
         run: |
-          cd FE
           npm run deploy
