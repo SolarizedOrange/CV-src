@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: block
         run: |
-          if ! [[ ${GITHUB_HEAD_REF} =~ ^dev/ ]];
+          if [[ ${GITHUB_HEAD_REF} != dev ]];
           then
             echo "Error: Tried to create a pull request into 'main' branch from other than 'dev' branch."
             exit 1
