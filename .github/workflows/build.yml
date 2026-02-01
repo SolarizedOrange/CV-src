@@ -16,7 +16,7 @@ jobs:
         run: |
           git config --global user.name ${{secrets.USER_NAME}}
           git config --global user.email ${{secrets.USER_EMAIL}}
-          git config --global user.password ${{secrets.AUTH_TOKEN}}
+          git config --global url.https://${{secrets.AUTH_TOKEN}}
       - name: publish
         run: |
           cd FE
