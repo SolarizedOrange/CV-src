@@ -2,7 +2,7 @@
   "name": "webtemp",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "https://SolarizedOrange/CV/",
+  "homepage": "https://SolarizedOrange.github.io/CV/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
