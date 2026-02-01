@@ -2,19 +2,20 @@
   "name": "webtemp",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "https://SolarizedOrange.github.io/CV/",
+  "homepage": "",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --nojekyll -r https://github.com/SolarizedOrange/CV.git -d out"
+    "deploy": "gh-pages --nojekyll -d out -r",
+    "temp": "npm run",
+    "temp2": "npm run temp"
   },
   "author": "",
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "next": "^16.1.6",
     "react-dom": "^19.2.4",
     "rect": "^1.2.1"
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@types/node": "25.1.0",
     "@types/react": "19.2.10",
+    "gh-pages": "^6.3.0",
     "typescript": "5.9.3"
   }
 }
