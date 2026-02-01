@@ -22,4 +22,4 @@ jobs:
           npm pkg set homepage=${{secrets.HOME_PAGE}}
           npm run deploy ${{secrets.BLOG_REPO}}
         env:
-          GITHUB_TOKEN: ${{secrets.AUTH_TOKEN}}
+          GH_TOKEN: ${{secrets.AUTH_TOKEN}}
