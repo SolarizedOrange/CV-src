@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --nojekyll -r https://github.com/SolarizedOrange/CV.git -d build"
+    "deploy": "gh-pages --nojekyll -r https://github.com/SolarizedOrange/CV.git -d out"
   },
   "author": "",
   "license": "MIT",
