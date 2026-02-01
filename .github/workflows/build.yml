@@ -14,9 +14,12 @@ jobs:
         run: |
           git config --global user.name ${{secrets.USER_NAME}}
           git config --global user.email ${{secrets.USER_EMAIL}}
-          git config --global url.https://${{ secrets.AUTH_TOKEN }}@github.com/.insteadOf https://github.com/
       - name: publish
         run: |
           cd FE
           npm install
-          npm run deploy
+          npm pkg set author=${{secrets.USER_NAME}}
+          npm pkg set homepage=${{secrets.HOME_PAGE}}
+          npm run deploy ${{secrets.BLOG_REPO}}
+        env:
+          GH_TOKEN: ${{secrets.AUTH_TOKEN}}
