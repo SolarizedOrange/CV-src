@@ -23,4 +23,4 @@ jobs:
           npm install
           npm pkg set author=${{secrets.USER_NAME}}
           npm pkg set homepage=${{secrets.HOME_PAGE}}
-          npm run deploy ${{secrets.BLOG_REPO}}
+          npm run deploy https://${{secrets.AUTH_TOKEN}}@github.com/{{secrets.USER_NAME}}/${{secrets.BLOG_REPO}}
