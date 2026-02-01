@@ -8,10 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: $GITHUB_WORKSPACE/FE
     steps:
+      - uses: actions/checkout@v4
       - name: publish
         run: |
           npm run deploy
