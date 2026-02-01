@@ -12,13 +12,13 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{secrets.AUTH_TOKEN}}
       - name: init_author
         run: |
           git config --global user.name ${{secrets.USER_NAME}}
           git config --global user.email ${{secrets.USER_EMAIL}}
       - name: publish
-        with:
-          token: ${{secrets.AUTH_TOKEN}}
         run: |
           cd FE
           npm install
