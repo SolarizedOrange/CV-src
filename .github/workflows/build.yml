@@ -13,4 +13,5 @@ jobs:
       - name: publish
         run: |
           cd FE
+          npm -i
           npm run deploy
