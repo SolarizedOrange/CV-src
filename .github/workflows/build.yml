@@ -9,13 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{secrets.AUTH_TOKEN}}
       - name: init_author
         run: |
           git config --global user.name ${{secrets.USER_NAME}}
@@ -26,4 +21,4 @@ jobs:
           npm install
           npm pkg set author=${{secrets.USER_NAME}}
           npm pkg set homepage=${{secrets.HOME_PAGE}}
-          npm run deploy https://github.com/${{secrets.USER_NAME}}/${{secrets.BLOG_REPO}}
+          npm run deploy https://${{secrets.USER_NAME}}:${{secrets.AUTH_TOKEN}}@github.com/${{secrets.USER_NAME}}/${{secrets.BLOG_REPO}}
